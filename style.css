@@ -162,3 +162,67 @@ footer{
     white-space: nowrap;
     line-height: 1;
 }
+.hero-buttons{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+@media (max-width:768px){
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+}
+
+.contact-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    background:rgba(255,255,255,.96);
+    padding:22px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:all .3s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 35px rgba(37,99,235,.18);
+}
+
+.contact-card i{
+    font-size:2rem;
+    color:#2563eb;
+    min-width:40px;
+}
+
+.contact-card h6{
+    margin:0;
+    font-size:1.1rem;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.contact-card p{
+    margin:4px 0 0;
+    color:#6b7280;
+}
+
+#contact a{
+    color:inherit;
+}
+
+#contact a:hover{
+    color:inherit;
+}
