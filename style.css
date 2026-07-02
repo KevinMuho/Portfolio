@@ -1,228 +1,166 @@
 body {
-    font-family: "Segoe UI", sans-serif;
-    color: #1f2937;
-
-    background: linear-gradient(
-        180deg,
-        #f8fbff 0%,
-        #eef6ff 20%,
-        #dbeafe 50%,
-        #d7ebff 75%,
-        #f8fbff 100%
-    );
-
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-.navbar {
-    background: rgba(255,255,255,.65);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    padding: 18px 0;
-
-    box-shadow: 0 2px 8px rgba(37,99,235,.08);
-}
-
-.navbar-brand {
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: #1f2937;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.28), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.18), transparent 35%),
+    #020617;
 }
 
 .nav-link {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-left: 28px;
-    color: #1f2937;
-    transition: .3s;
+  transition: color 0.25s ease;
 }
 
 .nav-link:hover {
-    color: #2563eb;
+  color: #60a5fa;
 }
 
-.nav-profile-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #2563eb;
+.section {
+  padding: 6rem 1.5rem;
+  scroll-margin-top: 90px;
 }
 
-.hero {
-    padding-top: 130px;
-    background: transparent;
+.section-title {
+  display: inline-block;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  position: relative;
 }
 
-.hero-content{
-    min-height:75vh;
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 70px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, #38bdf8);
 }
 
-.hero .lead {
-    color: #4b5563;
+.section-text {
+  color: #cbd5e1;
+  font-size: 1.125rem;
+  line-height: 1.9;
 }
 
-section {
-    background: transparent;
-    scroll-margin-top: 120px;
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: all 0.25s ease;
 }
 
-.projects-section {
-    background: transparent;
+.btn-primary {
+  background: linear-gradient(90deg, #2563eb, #0ea5e9);
+  color: white;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+.profile-card {
+  padding: 0.75rem;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #3b82f6, #38bdf8);
+  box-shadow: 0 25px 80px rgba(59, 130, 246, 0.35);
 }
 
 .card {
-    background: rgba(255,255,255,.96);
-    border: none;
-    border-radius: 18px;
-    transition: .3s;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  min-height: 100%;
+  padding: 1.7rem;
+  border-radius: 1.5rem;
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(18px);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 35px rgba(37,99,235,.18);
+  transform: translateY(-8px);
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 25px 70px rgba(37, 99, 235, 0.25);
 }
 
-#contact a{
-    color:#1f2937;
-    text-decoration:none;
-    transition:.3s;
+.card h3 {
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
 }
 
-#contact a:hover{
-    color:#2563eb;
+.card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
 }
 
-#contact i{
-    font-size:1.4rem;
-    width:30px;
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
 }
 
-footer{
-    background:transparent;
+.badges span {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.13);
+  border: 1px solid rgba(147, 197, 253, 0.25);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
 }
 
-#about{
-    padding-top:80px;
+.card-link {
+  color: #60a5fa;
+  font-weight: 900;
+  transition: color 0.25s ease;
 }
 
-.section-title{
-    position:relative;
-    display:inline-block;
-    margin-bottom:40px;
+.card-link:hover {
+  color: #bae6fd;
 }
 
-.section-title::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-12px;
-
-    width:70px;
-    height:4px;
-
-    background:#2563eb;
-    border-radius:5px;
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.4rem;
+  border-radius: 1.25rem;
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  font-weight: 700;
+  transition: all 0.25s ease;
 }
 
-
-.hero .btn{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.6);
+  color: #93c5fd;
 }
 
-.hero .btn:hover{
-    transform: scale(1.08);
-    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
-}
+@media (max-width: 640px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
 
-.card-body{
-    display:flex;
-    flex-direction:column;
-}
-
-.card-body .btn{
-    margin-top:auto;
-    width:fit-content;
-}
-
-.skill-badge {
-    display: inline-flex;
-    align-items: center;
-    background: #eef4ff;
-    color: #2563eb;
-    border: 1px solid #c7dcff;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 8px 14px;
-    margin: 0 8px 10px 0;
-    white-space: nowrap;
-    line-height: 1;
-}
-.hero-buttons{
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-}
-
-@media (max-width:768px){
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .hero-buttons .btn{
-        width:100%;
-    }
-
-}
-
-.contact-card{
-    display:flex;
-    align-items:center;
-    gap:20px;
-
-    background:rgba(255,255,255,.96);
-    padding:22px;
-
-    border-radius:18px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    transition:all .3s ease;
-}
-
-.contact-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 16px 35px rgba(37,99,235,.18);
-}
-
-.contact-card i{
-    font-size:2rem;
-    color:#2563eb;
-    min-width:40px;
-}
-
-.contact-card h6{
-    margin:0;
-    font-size:1.1rem;
-    font-weight:700;
-    color:#1f2937;
-}
-
-.contact-card p{
-    margin:4px 0 0;
-    color:#6b7280;
-}
-
-#contact a{
-    color:inherit;
-}
-
-#contact a:hover{
-    color:inherit;
+  .profile-card img {
+    width: 260px;
+    height: 260px;
+  }
 }
